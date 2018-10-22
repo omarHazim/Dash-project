@@ -21,7 +21,7 @@ app.layout = html.Div(children=[
                 {'x': [1, 2, 3], 'y': [4, 1, 2], 'type': 'bar', 'name': 'SF'},
                 {'x': [1, 2, 3], 'y': [2, 4, 5], 'type': 'bar', 'name': u'Montréal'},
             ],
-            ayout': go.Layout(
+            'layout': go.Layout(
                 ßxaxis={'type': 'log', 'title': 'GDP Per Capita'},
                 yaxis={'title': 'Life Expectancy'},
                 margin={'l': 40, 'b': 40, 't': 10, 'r': 10},
