@@ -23,8 +23,13 @@ app.layout = html.Div(children=[
             ],
             'layout': {
                 'title': 'Data Visualization',
-                'xaxis': dict(title: 'x axis'),
-                'yaxis': dict(title: 'y axis')
+                'xaxis'= dict(
+                title: 'x axis',
+                size = 25),
+                'yaxis'= dict(
+                title: 'y axis',
+                size=25
+                )
             }
 
             }
