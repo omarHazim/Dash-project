@@ -29,9 +29,8 @@ app.layout = html.Div(children=[
                 hovermode='closest'
             )
             }
-        }
     )
-])
+])ß
 
 if __name__ == '__main__':
     app.run_server(debug=True)
