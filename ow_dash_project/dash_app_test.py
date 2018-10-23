@@ -2,12 +2,15 @@
 import dash
 import dash_core_components as dcc
 import dash_html_components as html
-
+import base64
 
 # Boostrap CSS.
 #app.config['suppress_callback_exceptions']=True
 
 app = dash.Dash()
+
+image_filename = '/Users/omar/DB/om81/ow_dash_project/ow.png' # replace with your own image
+encoded_image = base64.b64encode(open(image_filename, 'rb').read())
 
 app.css.append_css(
     {'external_url': 'https://cdn.rawgit.com/plotly/dash-app-stylesheets/2d266c578d2a6e8850ebce48fdb52759b2aef506/stylesheet-oil-and-gas.css'})
@@ -18,10 +21,16 @@ app.layout = html.Div(
         html.Div([
             html.H1(children='Dash Test'),
             html.Img(
-                src="http://goo.gl/images/Lb1hG7",
+                src='data:image/png;base64,{}'.format(encoded_image.decode()),
                 className = 'three columns',
-                style={'float':'right',
-                'position':'relative'}),
+                style={
+                    'height' : '25%',
+                    'width' : '25%',
+                    'float' : 'right',
+                    'position' : 'relative',
+                    'padding-top' : -50,
+                    'padding-right' : 10
+                }),
 
             html.Div(children='''
                 Dash: A web application framework for Python.
