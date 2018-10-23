@@ -28,8 +28,8 @@ app.layout = html.Div(
                     'width' : '25%',
                     'float' : 'right',
                     'position' : 'relative',
-                    'padding-top' : -50,
-                    'padding-right' : 10
+                    'padding-top' : 0,
+                    'padding-right' : 0
                 }),
 
             html.Div(children='''
